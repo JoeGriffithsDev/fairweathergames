@@ -1,0 +1,88 @@
+/* Fair Weather Games: one quiet stylesheet for the studio pages. No web
+   fonts, scripts or anything loaded from elsewhere, so visiting the site
+   tells nobody anything. Layout: a single readable column on a pale sky. */
+:root {
+  --sky: #e4eef5;
+  --page: #fbf9f4;
+  --ink: #2b2a26;
+  --muted: #5c6570;
+  --line: #d5dde3;
+  --sun: #e2ad3b;
+  --link: #2c5a85;
+  --round: ui-rounded, "SF Pro Rounded", "Varela Round", "Nunito", "Arial Rounded MT Bold", system-ui, sans-serif;
+  --text: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --sky: #17212b;
+    --page: #1e2833;
+    --ink: #eef1f3;
+    --muted: #a9b4be;
+    --line: #34414d;
+    --sun: #e9b949;
+    --link: #8cc0ef;
+    color-scheme: dark;
+  }
+}
+* { box-sizing: border-box; }
+html { background: var(--sky); }
+body {
+  margin: 0;
+  background: var(--sky);
+  color: var(--ink);
+  font-family: var(--text);
+  font-size: 1.0625rem;
+  line-height: 1.6;
+}
+.wrap {
+  max-width: 40rem;
+  margin: 0 auto;
+  padding-left: max(18px, env(safe-area-inset-left, 0px));
+  padding-right: max(18px, env(safe-area-inset-right, 0px));
+  padding-block: 28px 56px;
+}
+header.studio {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 22px;
+}
+header.studio a { color: inherit; text-decoration: none; }
+.sun {
+  display: block;
+  flex: none;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: var(--sun);
+  box-shadow: 0 0 0 5px color-mix(in srgb, var(--sun) 30%, transparent);
+}
+.studio-name { font-family: var(--round); font-weight: 700; font-size: 1.15rem; letter-spacing: 0.01em; }
+main {
+  background: var(--page);
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  padding: 26px clamp(18px, 5vw, 36px) 30px;
+}
+h1, h2, h3 { font-family: var(--round); line-height: 1.2; text-wrap: balance; }
+h1 { font-size: 2rem; margin: 0 0 6px; }
+h2 { font-size: 1.3rem; margin: 30px 0 8px; }
+.game h2 { margin-top: 0; }
+p, ul { margin: 0 0 12px; }
+ul { padding-left: 1.3em; }
+li { margin-bottom: 4px; }
+a { color: var(--link); text-underline-offset: 2px; }
+a:focus-visible { outline: 3px solid var(--sun); outline-offset: 2px; border-radius: 3px; }
+.updated { color: var(--muted); font-size: 0.95rem; margin-bottom: 18px; }
+.lead { font-size: 1.15rem; }
+.muted { color: var(--muted); }
+.game {
+  border-top: 1px solid var(--line);
+  margin-top: 24px;
+  padding-top: 22px;
+}
+.game img { display: block; width: 100%; max-width: 100%; height: auto; margin-bottom: 14px; }
+.links { display: flex; flex-wrap: wrap; gap: 8px 18px; padding: 0; list-style: none; }
+.email { font-weight: 600; word-break: break-all; }
+footer { margin-top: 22px; color: var(--muted); font-size: 0.9rem; }
