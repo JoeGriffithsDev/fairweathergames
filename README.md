@@ -7,7 +7,11 @@ visiting it tells nobody anything.
 - `index.html`: the home page.
 - `bogwobblers/privacy/index.html`: the Bogwobblers privacy policy. Its address
   goes in Google Play Console and inside the game.
-- `style.css`: the look of both pages.
+- `bleed/privacy/index.html`: the Bleed privacy policy.
+- `bogwobblers/playtest/` and `bogwobblers/play/`: the friends' test, the
+  questions and the web version of the game. Not linked from the home page and
+  kept out of search engines.
+- `style.css`: the look of the studio pages.
 
 Changing the privacy policy: edit the page, change "Last updated" at the top,
 and do it before any version of the game that changes what it collects (for
