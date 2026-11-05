@@ -8,6 +8,7 @@ visiting it tells nobody anything.
 - `bogwobblers/privacy/index.html`: the Bogwobblers privacy policy. Its address
   goes in Google Play Console and inside the game.
 - `bleed/privacy/index.html`: the Bleed privacy policy.
+- `oche/privacy/index.html`: the Oche privacy policy.
 - `bogwobblers/playtest/` and `bogwobblers/play/`: the friends' test, the
   questions and the web version of the game. Not linked from the home page and
   kept out of search engines.
